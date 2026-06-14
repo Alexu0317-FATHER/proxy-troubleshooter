@@ -2,7 +2,7 @@
 
 Version: 0.1.0
 
-[中文说明](README.zh.md)
+[中文版](README.zh.md)
 
 Proxy Troubleshooter is a Codex plugin for diagnosing local proxy, Clash/Mihomo, routing rule, DNS, TUN, app bypass, and geo-redirect problems from local evidence.
 
