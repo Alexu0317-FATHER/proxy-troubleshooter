@@ -2,6 +2,8 @@
 
 版本：0.1.0
 
+[English](README.md)
+
 Proxy Troubleshooter 是一个 Codex 插件，用来根据本机证据排查代理、Clash/Mihomo、路由规则、DNS、TUN、应用绕过代理、地区跳转等问题。
 
 它面向不会用专业术语描述网络问题的用户。插件会指导 Codex 读取本机代理状态、判断可能原因，并在执行小范围可回滚修复前请求明确授权。
