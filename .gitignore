@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+.env
+.env.*
+!.env.example
+
+# Local runtime state and generated case logs must stay on the user's machine.
+proxy-troubleshooter-state/
+profile.json
+runs/
+cases/
+solutions/
+
+# Backups created by scoped config fixes should never be committed.
+*.proxy-troubleshooter.*.bak
+
+# Internal planning and handoff notes for this local project.
+HANDOFF.md

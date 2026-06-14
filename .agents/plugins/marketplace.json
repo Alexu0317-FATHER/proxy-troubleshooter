@@ -1,0 +1,22 @@
+{
+  "name": "proxy-troubleshooter",
+  "interface": {
+    "displayName": "Proxy Troubleshooter"
+  },
+  "plugins": [
+    {
+      "name": "proxy-troubleshooter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+        "path": "./plugins/proxy-troubleshooter",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "proxy-troubleshooter",
+  "version": "0.1.0",
+  "description": "Diagnose local proxy, Clash/Mihomo, routing rule, DNS, TUN, and app bypass problems with permissioned local probes and narrow reversible fixes.",
+  "author": {
+    "name": "Proxy Troubleshooter contributors"
+  },
+  "homepage": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+  "repository": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+  "license": "MIT",
+  "keywords": [
+    "proxy",
+    "clash",
+    "mihomo",
+    "vpn",
+    "network",
+    "routing"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Proxy Troubleshooter",
+    "shortDescription": "Diagnose local proxy and routing issues",
+    "longDescription": "Use local evidence to diagnose proxy clients, routing rules, DNS, TUN, app bypass, geo-redirects, and narrow Clash/Mihomo rule fixes with backup and rollback.",
+    "developerName": "Proxy Troubleshooter contributors",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+    "privacyPolicyURL": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter/blob/main/PRIVACY.md",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me diagnose a local proxy problem.",
+      "Google works but Gmail does not. Check my proxy setup.",
+      "Find out why an app is not using my proxy."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

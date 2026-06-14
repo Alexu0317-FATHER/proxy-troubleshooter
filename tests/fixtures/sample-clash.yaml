@@ -1,0 +1,6 @@
+mixed-port: 7890
+mode: rule
+rules:
+  - DOMAIN-SUFFIX,google.com,Proxy
+  - GEOIP,CN,DIRECT
+  - MATCH,DIRECT

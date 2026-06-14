@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proxy Troubleshooter"
+  short_description: "Diagnose local proxy and routing issues"
+  default_prompt: "Help me diagnose a local proxy problem."
