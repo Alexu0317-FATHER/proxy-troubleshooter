@@ -2,11 +2,13 @@
 
 Version: 0.1.0
 
-[中文版](README.zh.md)
+[简体中文](README.zh.md) | English
 
-Proxy Troubleshooter is a Codex plugin for diagnosing local proxy, Clash/Mihomo, routing rule, DNS, TUN, app bypass, and geo-redirect problems from local evidence.
+If YouTube works but Gmail refuses to load; if Google opens fine but LinkedIn mysteriously does not; or even if Claude Code works while Codex keeps reconnecting...
 
-It is designed for users who cannot describe proxy failures in specialist terms. The plugin guides Codex to inspect local proxy state, classify likely causes, and request scoped permission before applying narrow reversible fixes.
+If these problems look related to network proxies and, like me, you keep asking AI about them, the AI ends up spending tokens over and over collecting the same local facts: system proxy state, Clash/Mihomo config, DNS, TUN, and routing rules.
+
+Try Proxy Troubleshooter. It uses local evidence to diagnose proxy and VPN-like routing problems, and records investigated issues as local, redacted cases. When a similar issue comes back, you do not have to burn tokens collecting everything from scratch. If a config change is needed, it also gives backup and rollback guidance from a safety angle.
 
 ## What It Contains
 
