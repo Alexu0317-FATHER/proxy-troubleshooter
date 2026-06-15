@@ -1,0 +1,37 @@
+{
+  "name": "proxy-troubleshooter",
+  "owner": {
+    "name": "Proxy Troubleshooter contributors"
+  },
+  "description": "Claude Code marketplace for local proxy, Clash/Mihomo, DNS, TUN, and routing troubleshooting.",
+  "version": "0.2.0",
+  "plugins": [
+    {
+      "name": "proxy-troubleshooter",
+      "source": "./plugins/proxy-troubleshooter",
+      "description": "Diagnose local proxy, Clash/Mihomo, routing rule, DNS, TUN, and app bypass problems with permissioned local probes and narrow reversible fixes.",
+      "author": {
+        "name": "Proxy Troubleshooter contributors"
+      },
+      "homepage": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+      "repository": "https://github.com/Alexu0317-FATHER/proxy-troubleshooter",
+      "license": "MIT",
+      "keywords": [
+        "proxy",
+        "clash",
+        "mihomo",
+        "vpn",
+        "network",
+        "routing"
+      ],
+      "category": "Productivity",
+      "tags": [
+        "proxy",
+        "clash",
+        "mihomo",
+        "dns",
+        "tun"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Proxy Troubleshooter
 
-版本：0.1.0
+版本：0.2.0
 
 简体中文 | [English](README.md)
 
@@ -12,16 +12,20 @@
 
 ## 包含内容
 
-- Codex 插件：`plugins/proxy-troubleshooter`
+- 共享插件：`plugins/proxy-troubleshooter`
+- Codex manifest：`plugins/proxy-troubleshooter/.codex-plugin/plugin.json`
+- Claude Code manifest：`plugins/proxy-troubleshooter/.claude-plugin/plugin.json`
+- Codex marketplace catalog：`.agents/plugins/marketplace.json`
+- Claude Code marketplace catalog：`.claude-plugin/marketplace.json`
 - 内置技能：`proxy-troubleshooter`
 - 只读本机代理诊断脚本
 - Clash/Mihomo 小范围规则修复脚本，写入前会备份配置
 - 反馈记录脚本，用于记录修复是否有效，不会把本机案例上传到仓库
 - 测试：`tests/`
 
-## 从 GitHub marketplace 仓库安装
+## 在 Codex 中安装
 
-公开仓库发布后，把它添加为 Codex 插件 marketplace：
+把这个仓库添加为 Codex 插件 marketplace：
 
 ```powershell
 codex plugin marketplace add Alexu0317-FATHER/proxy-troubleshooter
@@ -29,15 +33,52 @@ codex plugin marketplace add Alexu0317-FATHER/proxy-troubleshooter
 
 然后在 Codex 插件目录里安装并启用 **Proxy Troubleshooter**，再开启一个新线程使用。
 
-## 从本地目录安装
-
-在仓库根目录执行：
+本地开发时，在仓库根目录执行：
 
 ```powershell
 codex plugin marketplace add .
 ```
 
 如果当前 Codex 线程里看不到插件，开启新线程或重启 Codex App。
+
+## 在 Claude Code 或 Claude Code Desktop 中安装
+
+这是 Claude Code 插件。Claude Code 官方文档覆盖 terminal、IDE、desktop app 和 browser，所以同一个插件也适用于 Claude Code Desktop。
+
+在 Claude Code 或 Claude Code Desktop 里执行：
+
+```text
+/plugin marketplace add Alexu0317-FATHER/proxy-troubleshooter
+/plugin install proxy-troubleshooter@proxy-troubleshooter
+/reload-plugins
+```
+
+之后可以直接调用技能：
+
+```text
+/proxy-troubleshooter:proxy-troubleshooter
+```
+
+如果要用命令行非交互安装：
+
+```powershell
+claude plugin marketplace add Alexu0317-FATHER/proxy-troubleshooter
+claude plugin install proxy-troubleshooter@proxy-troubleshooter
+```
+
+本地开发时，在仓库根目录执行：
+
+```powershell
+claude plugin validate .
+claude plugin marketplace add .
+claude plugin install proxy-troubleshooter@proxy-troubleshooter
+```
+
+如果只想在一次 Claude Code 会话里直接加载本地插件：
+
+```powershell
+claude --plugin-dir .\plugins\proxy-troubleshooter
+```
 
 ## 安全边界
 
@@ -59,11 +100,18 @@ codex plugin marketplace add .
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-如果本机有 Codex 内置校验器，可以校验 skill 和 plugin：
+如果本机有 Codex 内置校验器，可以校验 Codex skill 和 plugin：
 
 ```powershell
 python "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" ".\plugins\proxy-troubleshooter\skills\proxy-troubleshooter"
 python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py" ".\plugins\proxy-troubleshooter"
+```
+
+如果本机装了 Claude Code，可以校验 Claude marketplace 和 plugin：
+
+```powershell
+claude plugin validate .
+claude plugin validate .\plugins\proxy-troubleshooter
 ```
 
 ## 官方 Codex 插件目录
@@ -71,3 +119,12 @@ python "$env:USERPROFILE\.codex\skills\.system\plugin-creator\scripts\validate_p
 OpenAI 当前公开文档把 Codex App 的插件目录描述为：OpenAI curated 插件、工作区共享插件、用户创建或添加的插件；同时也说明 repo marketplace 可以用来分享插件。
 
 文档目前没有说明第三方插件进入官方 curated 目录的自助提交流程。所以，在 OpenAI 发布正式提交入口前，这个 GitHub marketplace 仓库就是公开分发路径。
+
+## 官方 Claude 插件市场
+
+Anthropic 的 Claude Code 文档说明了两个公开 marketplace：
+
+- `claude-plugins-official`：Anthropic 自己维护的 curated marketplace，没有申请流程。
+- `claude-community`：第三方插件通过审核后进入的社区 marketplace。提交前需要先运行 `claude plugin validate`。
+
+在这个插件被 `claude-community` 接收之前，直接从这个 GitHub marketplace 仓库安装。

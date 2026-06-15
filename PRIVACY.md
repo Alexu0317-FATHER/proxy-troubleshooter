@@ -1,6 +1,6 @@
 # Privacy
 
-Proxy Troubleshooter is designed to run local diagnostics through Codex on the user's machine.
+Proxy Troubleshooter is designed to run local diagnostics through Codex, Claude Code, or Claude Code Desktop on the user's machine.
 
 ## Data Collection
 
@@ -23,7 +23,7 @@ The plugin must not print or store subscription URLs, node credentials, controll
 
 ## Assistant Provider Boundary
 
-Text shown in a Codex conversation may be processed by the assistant provider. Do not paste unredacted subscription links, credentials, cookies, access tokens, or full private proxy configs into the conversation.
+Text shown in a Codex or Claude conversation may be processed by the assistant provider. Do not paste unredacted subscription links, credentials, cookies, access tokens, or full private proxy configs into the conversation.
 
 ## Changes To Local Files
 

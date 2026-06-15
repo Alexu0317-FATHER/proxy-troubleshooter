@@ -1,6 +1,6 @@
 {
   "name": "proxy-troubleshooter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Diagnose local proxy, Clash/Mihomo, routing rule, DNS, TUN, and app bypass problems with permissioned local probes and narrow reversible fixes.",
   "author": {
     "name": "Proxy Troubleshooter contributors"
